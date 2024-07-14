@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummyy</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-fluid d-flex position-fixed navContainer">
+        <div class="sideNav bg-black d-flex flex-column justify-content-between text-white">
+            <div class="links d-flex flex-column justify-content-between">
+                <ul class="list-unstyled overflow-hidden">
+                    <li>
+                <a class="p-3 nav-link" onclick="SearchInputs()">Search</a>
+                </li>
+                <li>
+                <a class="p-3 nav-link" onclick="getCategories()">Categories</a>
+                </li>
+                <li>
+                <a class="p-3 nav-link" onclick="getArea()">Area</a>
+                </li>
+                <li>
+                <a class="p-3 nav-link" onclick="getIngredients()">Ingredients</a>
+                </li>
+                <li>
+                <a class="p-3 nav-link" onclick="contactUs()">Contact Us</a>
+                </li>
+                </ul>
+            </div>
+            <div class="SideNavLinks p-3">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-globe"></i>
+                <p>Copyright &copy; 2019 All Rights<br> Reserved.</p>
+            </div>
+        </div>
+        <div class="sideBar bg-white d-flex flex-column align-items-center justify-content-between py-4 ">
+            <img src="images/WhatsApp Image 2024-07-11 at 11.09.01 PM.jpeg" alt="Sidebar Image">
+            <i class="fa-solid fa-xmark d-none" id="closeNav"></i>
+            <i class="fa-solid fa-bars" id="openNav"></i>
+            <div class="nav_social">
+                <i class="fa-solid fa-globe"></i><br>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container w-75 pt-5" id="searchContainer">
+        
+    </div>
+
+    <div class="DisplayCategory container w-100  mx-auto m-4">
+        <div class="row" id="rowData"></div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

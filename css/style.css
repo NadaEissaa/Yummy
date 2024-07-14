@@ -1,0 +1,267 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+}
+:root{
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    background-color: black;
+    overflow: hidden; 
+    font-family: "Manrope", sans-serif;
+}
+
+.container-fluid {
+    position: relative;
+}
+
+.sideNav {
+    position: fixed;
+    left: -200px; 
+    width: 200px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    transition: all 0.4s ease;
+    z-index: 99; 
+    padding: 15px;
+}
+
+.sideBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 100vh;
+    background-color: white;
+    z-index: 1100; 
+    transition: all 0.4s ease;
+    
+
+}
+
+.navContainer {
+    z-index: 99999;
+}
+
+.sideBar img {
+    width: 100%;
+}
+
+.sideBar i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.sideNav a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.sideNav a:hover{
+    color:#ffc107;
+    translate: 10px;
+    transition: all 0.2s ease;
+
+}
+.links li{
+
+    position: relative;
+    top: 300px; 
+    list-style: none;
+    opacity: 0;
+
+}
+
+.sideNav i {
+    cursor: pointer;
+}
+
+.d-none {
+    display: none;
+}
+
+.DisplayCategory {
+    margin-left: 60px; 
+    padding-right: 15px; 
+    box-sizing: border-box;
+}
+
+.meal {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.meal img {
+    width: 100%;
+    vertical-align: middle;
+    transition: transform 0.5s ease;
+}
+
+.meal-Layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 234, 234, 0.497);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#181817;
+    transform: translateY(100%);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    padding: 1rem;
+    box-sizing: border-box;
+    opacity: 0;
+  
+}
+
+.meal:hover .meal-Layer {
+    transform: translateY(0);
+    opacity: 1;
+}
+.ingreDiv{
+    cursor: pointer;
+}
+
+
+.tag {
+    background-color: #17a2b8; 
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.tag:hover {
+    background-color: #138496; 
+}
+
+.ingredient-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+.ingredient-item {
+    background-color: #8de1f4b2; 
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    /* flex: 1 1 calc(33.333% - 10px); */
+    box-sizing: border-box;
+}
+.mealDetailsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.mealPhotoName {
+    flex: 0 1 300px; 
+    margin: 0 10px;
+}
+
+.mealDetails {
+    flex: 1; 
+    margin: 0 10px;
+}
+
+.mealDetails h3 {
+    margin-top: 0;
+}
+
+.ingredient-list, .tags-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+
+
+
+.tag {
+    background-color: #17a2b8; 
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.tag:hover {
+    background-color: #138496; 
+}
+.form-control::placeholder{
+    color:#f7f5ee9e;
+    opacity: 1;
+}
+.loading{
+    position: fixed;
+    width:100%;
+    height: 100%;
+    top:0;
+    bottom:0 ;
+    left:0;
+    right: 0;
+    background-color: #1111117c;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite
+  }
+  .loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    animation: prixClipFix 2s linear infinite ;
+  }
+  .loader::after{
+    inset: 8px;
+    transform: rotate3d(90, 90, 0, 180deg );
+    border-color: #FF3D00;
+  }
+
+  @keyframes rotate {
+    0%   {transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
